@@ -1,49 +1,66 @@
-
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
-
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Calculadora'),
+        title: const Text('Calculadora'),
       ),
       body: Column(
         children: [
-          Row(
-            children: [
-              FloatingActionButton(onPressed: () {}, child: Text('7')),
-              FloatingActionButton(onPressed: () {}, child: Text('8')),
-              FloatingActionButton(onPressed: () {}, child: Text('9')),
-              FloatingActionButton(onPressed: () {}, child: Text('/')),
-            ],
+          const Expanded(
+            flex: 1,
+            child: SizedBox(),
           ),
-          Row(
-            children: [
-              FloatingActionButton(onPressed: () {}, child: Text('4')),
-              FloatingActionButton(onPressed: () {}, child: Text('5')),
-              FloatingActionButton(onPressed: () {}, child: Text('6')),
-              FloatingActionButton(onPressed: () {}, child: Text('*')),
-            ],
-          ),
-          Row(
-            children: [
-              FloatingActionButton(onPressed: () {}, child: Text('1')),
-              FloatingActionButton(onPressed: () {}, child: Text('2')),
-              FloatingActionButton(onPressed: () {}, child: Text('3')),
-              FloatingActionButton(onPressed: () {}, child: Text('-')),
-            ],
-          ),
-          Row(
-            children: [
-              FloatingActionButton(onPressed: () {}, child: Text('0')),
-              FloatingActionButton(onPressed: () {}, child: Text('.')),
-              FloatingActionButton(onPressed: () {}, child: Text('=')),
-              FloatingActionButton(onPressed: () {}, child: Text('+')),
-            ],
+          Expanded(
+            flex: 1,
+            child: Column(
+              children: [
+                Expanded(
+                  child: Row(
+                    children: [
+                      Expanded(child: FloatingActionButton(onPressed: () {}, child: const Text('7'))),
+                      Expanded(child: FloatingActionButton(onPressed: () {}, child: const Text('8'))),
+                      Expanded(child: FloatingActionButton(onPressed: () {}, child: const Text('9'))),
+                      Expanded(child: FloatingActionButton(onPressed: () {}, child: const Text('/'))),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Row(
+                    children: [
+                      Expanded(child: FloatingActionButton(onPressed: () {}, child: const Text('4'))),
+                      Expanded(child: FloatingActionButton(onPressed: () {}, child: const Text('5'))),
+                      Expanded(child: FloatingActionButton(onPressed: () {}, child: const Text('6'))),
+                      Expanded(child: FloatingActionButton(onPressed: () {}, child: const Text('*'))),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Row(
+                    children: [
+                      Expanded(child: FloatingActionButton(onPressed: () {}, child: const Text('1'))),
+                      Expanded(child: FloatingActionButton(onPressed: () {}, child: const Text('2'))),
+                      Expanded(child: FloatingActionButton(onPressed: () {}, child: const Text('3'))),
+                      Expanded(child: FloatingActionButton(onPressed: () {}, child: const Text('-'))),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Row(
+                    children: [
+                      Expanded(child: FloatingActionButton(onPressed: () {}, child: const Text('0'))),
+                      Expanded(child: FloatingActionButton(onPressed: () {}, child: const Text('.'))),
+                      Expanded(child: FloatingActionButton(onPressed: () {}, child: const Text('='))),
+                      Expanded(child: FloatingActionButton(onPressed: () {}, child: const Text('+'))),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),
